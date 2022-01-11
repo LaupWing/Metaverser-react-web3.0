@@ -1,8 +1,13 @@
 import Head from 'next/head'
+import Login from '../components/Login'
 
 export default function Home() {
+   const isAuthenticated = false
+
+   if(!isAuthenticated) return <Login/>
+
    return (
-      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <div className="h-screen w-screen">
          <Head>
             <title>Metaverse challenge</title>
             <link rel="icon" href="/favicon.ico" />
